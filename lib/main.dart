@@ -21,6 +21,7 @@ void main() {
             statusBarBrightness: Brightness.light,
           ),
         ),
+        fontFamily: 'Poppins',
       ),
     ),
   );

@@ -1,23 +1,7 @@
 import 'package:get/get.dart';
 
 class OnBoardingController extends GetxController {
-  //TODO: Implement OnBoardingController
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  goNext() {
+    Get.toNamed('/login');
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
