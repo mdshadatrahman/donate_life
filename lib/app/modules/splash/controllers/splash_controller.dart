@@ -8,7 +8,8 @@ class SplashController extends GetxController {
   void onInit() {
     Future.delayed(const Duration(seconds: 2), () async {
       log('SplashController');
-      Get.offAllNamed(Routes.HOME);
+      //TODO: Write logic to check if user is logged in or not and navigate accordingly
+      Get.offAllNamed(Routes.ON_BOARDING);
     });
     super.onInit();
   }
