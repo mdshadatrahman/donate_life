@@ -14,13 +14,25 @@ class SplashView extends GetView<SplashController> {
       value: SystemUiOverlayStyle.dark,
       child: Scaffold(
         backgroundColor: AppColors.white,
-        body: Center(
-          child: SizedBox(
-            width: Get.width * 0.5,
-            child: SvgPicture.asset(
-              'assets/svg/logo.svg',
+        body: Stack(
+          children: [
+            Center(
+              child: SizedBox(
+                width: Get.width * 0.4,
+                child: SvgPicture.asset(
+                  'assets/svg/logo.svg',
+                ),
+              ),
             ),
-          ),
+            Positioned(
+              bottom: Get.height * 0.05,
+              right: 0,
+              left: 0,
+              child: SvgPicture.asset(
+                'assets/svg/name_icon.svg',
+              ),
+            ),
+          ],
         ),
       ),
     );
