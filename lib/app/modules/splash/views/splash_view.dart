@@ -9,13 +9,17 @@ class SplashView extends GetView<SplashController> {
   const SplashView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    Get.put<SplashController>(SplashController());
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.dark,
       child: Scaffold(
         backgroundColor: AppColors.white,
         body: Center(
-          child: SvgPicture.asset(
-            'assets/svg/logo.svg',
+          child: SizedBox(
+            width: Get.width * 0.5,
+            child: SvgPicture.asset(
+              'assets/svg/logo.svg',
+            ),
           ),
         ),
       ),
