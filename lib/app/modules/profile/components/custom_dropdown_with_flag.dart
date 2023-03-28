@@ -12,60 +12,65 @@ class CustomDropDownWithFlag extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.white,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.black.withOpacity(0.1),
-            blurRadius: 10,
-            offset: const Offset(0, 5),
-          ),
-        ],
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: AppColors.black.withOpacity(0.1),
+        //     blurRadius: 10,
+        //     offset: const Offset(0, 5),
+        //   ),
+        // ],
       ),
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(Radius.circular(10)),
-              border: Border.all(
-                color: AppColors.primaryColor,
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 25),
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            Container(
+              height: 53,
+              decoration: BoxDecoration(
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
+                border: Border.all(
+                  color: AppColors.primaryColor.withOpacity(0.2),
+                ),
               ),
-            ),
-            child: const CountryCodePicker(
-              onChanged: print,
-              initialSelection: 'bd',
-              favorite: ['+880', 'bd'],
-              showCountryOnly: true,
-              showOnlyCountryWhenClosed: true,
-              alignLeft: true,
-              showDropDownButton: true,
-              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-              closeIcon: Icon(
-                Icons.close,
-                color: AppColors.primaryColor,
-              ),
-            ),
-          ),
-          Positioned(
-            top: -13,
-            left: 10,
-            child: Container(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 10,
-                vertical: 2.5,
-              ),
-              color: AppColors.primaryColor,
-              child: Text(
-                '$title *',
-                style: const TextStyle(
-                  color: AppColors.white,
-                  fontSize: 14,
+              child: const Center(
+                child: CountryCodePicker(
+                  onChanged: print,
+                  initialSelection: 'bd',
+                  favorite: ['+880', 'bd'],
+                  showCountryOnly: true,
+                  showOnlyCountryWhenClosed: true,
+                  alignLeft: true,
+                  showDropDownButton: true,
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  closeIcon: Icon(
+                    Icons.close,
+                    color: AppColors.primaryColor,
+                  ),
                 ),
               ),
             ),
-          )
-        ],
+            Positioned(
+              top: -15,
+              left: 10,
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 2.5,
+                ),
+                color: AppColors.primaryColor,
+                child: Text(
+                  '$title *',
+                  style: const TextStyle(
+                    color: AppColors.white,
+                    fontSize: 14,
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

@@ -16,63 +16,65 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.white,
+        color: Colors.transparent,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.black.withOpacity(0.1),
-            blurRadius: 10,
-            offset: const Offset(0, 5),
-          ),
-        ],
+        // boxShadow: [
+        //   BoxShadow(
+        //     color: AppColors.black.withOpacity(0.1),
+        //     blurRadius: 10,
+        //     offset: const Offset(0, 5),
+        //   ),
+        // ],
       ),
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          TextFormField(
-            keyboardType: keyboardType,
-            // style: const TextStyle(
-            // color: AppColors.textColor,
-            // fontSize: 11,
-            // fontWeight: FontWeight.w400,
-            // ),
-            decoration: const InputDecoration(
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                borderSide: BorderSide(
-                  color: AppColors.primaryColor,
+      child: Padding(
+        padding: const EdgeInsets.only(bottom: 25),
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            TextFormField(
+              keyboardType: keyboardType,
+              decoration: InputDecoration(
+                contentPadding: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                  vertical: 15,
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: const BorderRadius.all(Radius.circular(10)),
+                  borderSide: BorderSide(
+                    color: AppColors.primaryColor.withOpacity(0.2),
+                  ),
+                ),
+                focusedBorder: const OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  borderSide: BorderSide(
+                    color: AppColors.primaryColor,
+                  ),
                 ),
               ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
-                borderSide: BorderSide(
-                  color: AppColors.primaryColor,
-                ),
-              ),
+              onChanged: (value) {
+                //TODO controller.category.value = value.toString();
+              },
             ),
-            onChanged: (value) {
-              //TODO controller.category.value = value.toString();
-            },
-          ),
-          Positioned(
-            top: -13,
-            left: 10,
-            child: Container(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 10,
-                vertical: 2.5,
-              ),
-              color: AppColors.primaryColor,
-              child: Text(
-                '$title ',
-                style: const TextStyle(
-                  color: AppColors.white,
-                  fontSize: 14,
+            Positioned(
+              top: -15,
+              left: 10,
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 10,
+                  vertical: 2.5,
+                ),
+                color: AppColors.primaryColor,
+                child: Text(
+                  '$title ',
+                  style: const TextStyle(
+                    color: AppColors.white,
+                    fontSize: 14,
+                  ),
                 ),
               ),
-            ),
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }

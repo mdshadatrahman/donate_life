@@ -11,27 +11,6 @@ import '../components/custom_dropdown_with_flag.dart';
 class ProfileView extends GetView<ProfileController> {
   const ProfileView({Key? key}) : super(key: key);
 
-  // String _selectedDate = '';
-  // String _dateCount = '';
-  // String _range = '';
-  // String _rangeCount = '';
-
-  // void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
-  //   setState(() {
-  //     if (args.value is PickerDateRange) {
-  //       _range = '${DateFormat('dd/MM/yyyy').format(args.value.startDate)} -'
-  //           // ignore: lines_longer_than_80_chars
-  //           ' ${DateFormat('dd/MM/yyyy').format(args.value.endDate ?? args.value.startDate)}';
-  //     } else if (args.value is DateTime) {
-  //       _selectedDate = args.value.toString();
-  //     } else if (args.value is List<DateTime>) {
-  //       _dateCount = args.value.length.toString();
-  //     } else {
-  //       _rangeCount = args.value.length.toString();
-  //     }
-  //   });
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -107,123 +86,121 @@ class ProfileView extends GetView<ProfileController> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 20),
+                  const SizedBox(height: 40),
                   const CustomTextField(
                     title: 'Full Name',
                     keyboardType: TextInputType.name,
                     isRequired: true,
                   ),
-                  const SizedBox(height: 20),
                   const CustomTextField(
                     title: 'Email Address (optional)',
                     keyboardType: TextInputType.emailAddress,
                     isRequired: false,
                   ),
-                  const SizedBox(height: 20),
                   const CustomTextField(
                     title: 'Mobile Number',
                     keyboardType: TextInputType.streetAddress,
                     isRequired: true,
                   ),
-                  const SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Expanded(
-                        child: CustomDropDown(
-                          title: 'Blood Group',
-                          customCategory: [
-                            'A+',
-                            'A-',
-                            'B+',
-                            'B-',
-                            'AB+',
-                            'AB-',
-                            'O+',
-                            'O-',
-                          ],
-                        ),
-                      ),
-                      const SizedBox(width: 10),
-                      Expanded(
-                        child: GestureDetector(
-                          onTap: () {
-                            controller.selectDate(context);
-                          },
-                          child: Stack(
-                            clipBehavior: Clip.none,
-                            children: [
-                              Container(
-                                height: 65,
-                                width: double.infinity,
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 10,
-                                ),
-                                decoration: BoxDecoration(
-                                  border: Border.all(
-                                    color: AppColors.primaryColor,
-                                    width: 1,
-                                  ),
-                                  color: AppColors.white,
-                                  borderRadius: BorderRadius.circular(10),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: AppColors.black.withOpacity(0.1),
-                                      blurRadius: 10,
-                                      offset: const Offset(0, 5),
-                                    ),
-                                  ],
-                                ),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    //TODO working here
-                                    Obx(
-                                      () => Text(
-                                        controller.selectedDateFormatted,
-                                        style: const TextStyle(
-                                          color: AppColors.secondaryColor,
-                                          fontSize: 14,
-                                        ),
-                                      ),
-                                    ),
-                                    const Icon(
-                                      Icons.calendar_month_outlined,
-                                      color: AppColors.secondaryColor,
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Positioned(
-                                top: -13,
-                                left: 10,
-                                child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                    horizontal: 10,
-                                    vertical: 2.5,
-                                  ),
-                                  color: AppColors.primaryColor,
-                                  child: const Text(
-                                    'Birth Date',
-                                    style: TextStyle(
-                                      color: AppColors.white,
-                                      fontSize: 14,
-                                    ),
-                                  ),
-                                ),
-                              )
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 25),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Expanded(
+                          child: CustomDropDown(
+                            title: 'Blood Group',
+                            customCategory: [
+                              'A+',
+                              'A-',
+                              'B+',
+                              'B-',
+                              'AB+',
+                              'AB-',
+                              'O+',
+                              'O-',
                             ],
                           ),
                         ),
-                      ),
-                    ],
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: () {
+                              controller.selectDate(context);
+                            },
+                            child: Stack(
+                              clipBehavior: Clip.none,
+                              children: [
+                                Container(
+                                  height: 53,
+                                  width: double.infinity,
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 10,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: AppColors.primaryColor.withOpacity(0.2),
+                                      width: 1,
+                                    ),
+                                    // color: AppColors.white,
+                                    borderRadius: BorderRadius.circular(10),
+                                    // boxShadow: [
+                                    //   BoxShadow(
+                                    //     color: AppColors.black.withOpacity(0.1),
+                                    //     blurRadius: 10,
+                                    //     offset: const Offset(0, 5),
+                                    //   ),
+                                    // ],
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      //TODO working here
+                                      Obx(
+                                        () => Text(
+                                          controller.selectedDateFormatted,
+                                          style: const TextStyle(
+                                            color: AppColors.secondaryColor,
+                                            fontSize: 14,
+                                          ),
+                                        ),
+                                      ),
+                                      const Icon(
+                                        Icons.calendar_month_outlined,
+                                        color: AppColors.secondaryColor,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  top: -15,
+                                  left: 10,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 2.5,
+                                    ),
+                                    color: AppColors.primaryColor,
+                                    child: const Text(
+                                      'Birth Date',
+                                      style: TextStyle(
+                                        color: AppColors.white,
+                                        fontSize: 14,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
-                  const SizedBox(height: 20),
                   const CustomDropDownWithFlag(
                     title: 'Country/region',
                   ),
-                  const SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     mainAxisSize: MainAxisSize.min,

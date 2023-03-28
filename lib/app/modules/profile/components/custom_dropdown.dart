@@ -14,28 +14,24 @@ class CustomDropDown extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.white,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.black.withOpacity(0.1),
-            blurRadius: 10,
-            offset: const Offset(0, 5),
-          ),
-        ],
       ),
       child: Stack(
         clipBehavior: Clip.none,
         children: [
           DropdownButtonFormField(
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
+              contentPadding: const EdgeInsets.symmetric(
+                horizontal: 20,
+                vertical: 15,
+              ),
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.all(Radius.circular(10)),
+                borderRadius: const BorderRadius.all(Radius.circular(10)),
                 borderSide: BorderSide(
-                  color: AppColors.primaryColor,
+                  color: AppColors.primaryColor.withOpacity(0.2),
                 ),
               ),
-              focusedBorder: OutlineInputBorder(
+              focusedBorder: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10)),
                 borderSide: BorderSide(
                   color: AppColors.primaryColor,
@@ -59,7 +55,7 @@ class CustomDropDown extends StatelessWidget {
             },
           ),
           Positioned(
-            top: -13,
+            top: -15,
             left: 10,
             child: Container(
               padding: const EdgeInsets.symmetric(
