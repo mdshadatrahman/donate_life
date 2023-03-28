@@ -12,13 +12,16 @@ class CustomDropDownWithFlag extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.white,
         borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.black.withOpacity(0.1),
-            blurRadius: 10,
-            offset: const Offset(0, 5),
-          ),
-        ],
+        border: Border.all(
+          color: AppColors.secondaryColor.withOpacity(0.1),
+        ),
+        // boxShadow: [
+        // BoxShadow(
+        //   color: AppColors.black.withOpacity(0.1),
+        //   blurRadius: 10,
+        //   offset: const Offset(0, 5),
+        // ),
+        // ],
       ),
       child: Stack(
         clipBehavior: Clip.none,
