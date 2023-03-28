@@ -30,7 +30,7 @@ class OnBoardingView extends GetView<OnBoardingController> {
           //blood text
           Positioned(
             top: 300,
-            left: 15,
+            left: 20,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
