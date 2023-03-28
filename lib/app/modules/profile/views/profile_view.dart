@@ -272,7 +272,7 @@ class ProfileView extends GetView<ProfileController> {
                       ),
                       child: const Center(
                         child: Text(
-                          'Add Store',
+                          'Create Profile',
                           style: TextStyle(
                             color: AppColors.white,
                             fontSize: 16,
