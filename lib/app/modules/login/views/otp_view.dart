@@ -131,7 +131,7 @@ class OtpView extends GetView<LoginController> {
                 const Spacer(),
                 PrimaryButton(
                   onTap: () {
-                    //TODO: Navigate to Request OTP
+                    Get.toNamed('/profile');
                   },
                   text: 'Verify',
                 ),

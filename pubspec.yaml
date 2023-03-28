@@ -14,6 +14,7 @@ dependencies:
   lottie: ^2.3.0
   intl_phone_number_input: ^0.7.2
   pinput: ^2.2.31
+  country_code_picker: ^3.0.0
 
 dev_dependencies:
   flutter_lints: 2.0.1
