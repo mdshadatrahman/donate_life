@@ -90,34 +90,44 @@ class OnBoardingView extends GetView<OnBoardingController> {
 
           Positioned(
             bottom: 30,
-            left: 50,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
-                Text(
-                  'Your Help Matters',
-                  style: TextStyle(
-                    fontSize: AppSizes.fontSize14,
-                    color: AppColors.secondaryColor,
-                    fontFamily: Fonts.poppins,
-                    fontWeight: FontWeight.w500,
-                  ),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Container(
+                width: Get.width - 40,
+                padding: const EdgeInsets.only(left: 50, top: 10, bottom: 10),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFD9D9D9).withOpacity(0.5),
+                  borderRadius: BorderRadius.circular(100),
                 ),
-                Text(
-                  'Find Donor Nearby',
-                  style: TextStyle(
-                    fontSize: AppSizes.fontSize16,
-                    color: AppColors.primaryColor,
-                    fontFamily: Fonts.poppins,
-                    fontWeight: FontWeight.w600,
-                  ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Text(
+                      'Your Help Matters',
+                      style: TextStyle(
+                        fontSize: AppSizes.fontSize14,
+                        color: AppColors.secondaryColor,
+                        fontFamily: Fonts.poppins,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    Text(
+                      'Find Donor Nearby',
+                      style: TextStyle(
+                        fontSize: AppSizes.fontSize16,
+                        color: AppColors.primaryColor,
+                        fontFamily: Fonts.poppins,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
           Positioned(
-            bottom: 50,
+            bottom: 60,
             right: 50,
             child: InkWell(
               onTap: () {
