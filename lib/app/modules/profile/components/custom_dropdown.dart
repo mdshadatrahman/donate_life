@@ -55,7 +55,7 @@ class CustomDropDown extends StatelessWidget {
             },
           ),
           Positioned(
-            top: -15,
+            top: -10,
             left: 10,
             child: Container(
               padding: const EdgeInsets.symmetric(
@@ -67,7 +67,7 @@ class CustomDropDown extends StatelessWidget {
                 title,
                 style: const TextStyle(
                   color: AppColors.white,
-                  fontSize: 14,
+                  fontSize: 11,
                 ),
               ),
             ),

@@ -52,7 +52,7 @@ class CustomDropDownWithFlag extends StatelessWidget {
               ),
             ),
             Positioned(
-              top: -15,
+              top: -10,
               left: 10,
               child: Container(
                 padding: const EdgeInsets.symmetric(
@@ -64,7 +64,7 @@ class CustomDropDownWithFlag extends StatelessWidget {
                   '$title *',
                   style: const TextStyle(
                     color: AppColors.white,
-                    fontSize: 14,
+                    fontSize: 11,
                   ),
                 ),
               ),

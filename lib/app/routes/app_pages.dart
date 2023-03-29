@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/bottom_nav_bar/bindings/bottom_nav_bar_binding.dart';
+import '../modules/bottom_nav_bar/views/bottom_nav_bar_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login/bindings/login_binding.dart';
@@ -43,6 +45,11 @@ class AppPages {
       name: _Paths.PROFILE,
       page: () => const ProfileView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOTTOM_NAV_BAR,
+      page: () => const BottomNavBarView(),
+      binding: BottomNavBarBinding(),
     ),
   ];
 }

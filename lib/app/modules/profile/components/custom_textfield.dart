@@ -18,13 +18,6 @@ class CustomTextField extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.transparent,
         borderRadius: BorderRadius.circular(10),
-        // boxShadow: [
-        //   BoxShadow(
-        //     color: AppColors.black.withOpacity(0.1),
-        //     blurRadius: 10,
-        //     offset: const Offset(0, 5),
-        //   ),
-        // ],
       ),
       child: Padding(
         padding: const EdgeInsets.only(bottom: 25),
@@ -56,7 +49,7 @@ class CustomTextField extends StatelessWidget {
               },
             ),
             Positioned(
-              top: -15,
+              top: -10,
               left: 10,
               child: Container(
                 padding: const EdgeInsets.symmetric(
@@ -68,7 +61,7 @@ class CustomTextField extends StatelessWidget {
                   '$title ',
                   style: const TextStyle(
                     color: AppColors.white,
-                    fontSize: 14,
+                    fontSize: 11,
                   ),
                 ),
               ),

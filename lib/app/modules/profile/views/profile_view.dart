@@ -176,7 +176,7 @@ class ProfileView extends GetView<ProfileController> {
                                   ),
                                 ),
                                 Positioned(
-                                  top: -15,
+                                  top: -10,
                                   left: 10,
                                   child: Container(
                                     padding: const EdgeInsets.symmetric(
@@ -188,7 +188,7 @@ class ProfileView extends GetView<ProfileController> {
                                       'Birth Date',
                                       style: TextStyle(
                                         color: AppColors.white,
-                                        fontSize: 14,
+                                        fontSize: 11,
                                       ),
                                     ),
                                   ),
