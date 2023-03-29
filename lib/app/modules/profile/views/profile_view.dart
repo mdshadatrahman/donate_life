@@ -1,6 +1,7 @@
 import 'package:donate_life/app/modules/profile/components/custom_dropdown.dart';
 import 'package:donate_life/app/modules/profile/components/custom_textfield.dart';
 import 'package:donate_life/app/modules/profile/controllers/profile_controller.dart';
+import 'package:donate_life/app/routes/app_pages.dart';
 import 'package:donate_life/app/utils/colors.dart';
 import 'package:donate_life/utils/custom_clipper.dart';
 import 'package:flutter/material.dart';
@@ -240,7 +241,7 @@ class ProfileView extends GetView<ProfileController> {
                   const SizedBox(height: 20),
                   GestureDetector(
                     onTap: () {
-                      //TODO controller.submitProfile();
+                      Get.toNamed(Routes.BOTTOM_NAV_BAR);
                     },
                     child: Container(
                       height: 50,

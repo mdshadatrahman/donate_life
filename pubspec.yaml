@@ -25,6 +25,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/svg/
+    - assets/svg/bottom_nav/
     - assets/lottie/
   fonts:
     - family: Poppins
