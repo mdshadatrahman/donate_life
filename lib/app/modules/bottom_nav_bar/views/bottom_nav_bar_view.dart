@@ -11,6 +11,7 @@ class BottomNavBarView extends GetView<BottomNavBarController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        top: false,
         child: SizedBox(
           width: Get.width,
           height: Get.height,
