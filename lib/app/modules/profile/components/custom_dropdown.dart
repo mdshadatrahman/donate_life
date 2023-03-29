@@ -40,8 +40,8 @@ class CustomDropDown extends StatelessWidget {
             ),
             icon: const Icon(
               Icons.keyboard_arrow_down_sharp,
-              color: AppColors.secondaryColor,
-              size: 30,
+              color: Colors.grey,
+              size: 24,
             ),
             items: List.generate(
               customCategory!.length,

@@ -156,13 +156,15 @@ class ProfileView extends GetView<ProfileController> {
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      //TODO working here
-                                      Obx(
-                                        () => Text(
-                                          controller.selectedDateFormatted,
-                                          style: const TextStyle(
-                                            color: AppColors.secondaryColor,
-                                            fontSize: 14,
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 10),
+                                        child: Obx(
+                                          () => Text(
+                                            controller.selectedDateFormatted,
+                                            style: const TextStyle(
+                                              color: AppColors.secondaryColor,
+                                              fontSize: 14,
+                                            ),
                                           ),
                                         ),
                                       ),
@@ -260,10 +262,6 @@ class ProfileView extends GetView<ProfileController> {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 20),
-                  const SizedBox(height: 20),
-                  const SizedBox(height: 20),
-                  const SizedBox(height: 20),
                 ],
               ),
             ),
