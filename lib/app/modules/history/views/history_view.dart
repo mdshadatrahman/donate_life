@@ -42,12 +42,16 @@ class HistoryView extends GetView<HistoryController> {
               ),
             ),
             Positioned(
-              top: 63,
+              top: 60,
               right: 30,
               child: Center(
-                child: SvgPicture.asset(
-                  'assets/svg/history/add.svg',
-                  fit: BoxFit.fill,
+                child: SizedBox(
+                  height: 30,
+                  width: 30,
+                  child: SvgPicture.asset(
+                    'assets/svg/history/add.svg',
+                    fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),
@@ -165,25 +169,31 @@ class DonationCard extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                right: 60,
+                right: 65,
                 top: 0,
                 bottom: 0,
-                child: SizedBox(
-                  width: 100,
-                  child: SvgPicture.asset('assets/svg/history/logo_white.svg'),
+                child: SvgPicture.asset(
+                  'assets/svg/history/logo_white.svg',
+                  height: 200,
                 ),
               ),
               Positioned(
-                right: 40,
+                right: 50,
                 top: 0,
                 bottom: 0,
-                child: SvgPicture.asset('assets/svg/history/donate_life.svg'),
+                child: SvgPicture.asset(
+                  'assets/svg/history/donate_life.svg',
+                  height: 110,
+                ),
               ),
               Positioned(
                 right: 0,
                 top: 0,
                 bottom: 0,
-                child: SvgPicture.asset('assets/svg/history/bar_code.svg'),
+                child: SvgPicture.asset(
+                  'assets/svg/history/bar_code.svg',
+                  height: 160,
+                ),
               ),
               Column(
                 mainAxisSize: MainAxisSize.min,
