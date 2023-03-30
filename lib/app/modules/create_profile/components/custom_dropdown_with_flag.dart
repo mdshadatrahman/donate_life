@@ -41,6 +41,7 @@ class CustomDropDownWithFlag extends StatelessWidget {
                   favorite: ['+880', 'bd'],
                   showCountryOnly: true,
                   showOnlyCountryWhenClosed: true,
+                  showFlag: false,
                   alignLeft: true,
                   showDropDownButton: true,
                   padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),

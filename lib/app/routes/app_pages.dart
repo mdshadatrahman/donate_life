@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/bottom_nav_bar/bindings/bottom_nav_bar_binding.dart';
 import '../modules/bottom_nav_bar/views/bottom_nav_bar_view.dart';
+import '../modules/create_profile/bindings/profile_binding.dart';
+import '../modules/create_profile/views/profile_view.dart';
 import '../modules/history/bindings/history_binding.dart';
 import '../modules/history/views/history_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -14,8 +16,6 @@ import '../modules/notification/bindings/notification_binding.dart';
 import '../modules/notification/views/notification_view.dart';
 import '../modules/on_boarding/bindings/on_boarding_binding.dart';
 import '../modules/on_boarding/views/on_boarding_view.dart';
-import '../modules/profile/bindings/profile_binding.dart';
-import '../modules/profile/views/profile_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 

@@ -1,10 +1,11 @@
-import 'package:donate_life/app/modules/profile/components/custom_dropdown.dart';
-import 'package:donate_life/app/modules/profile/components/custom_textfield.dart';
-import 'package:donate_life/app/modules/profile/controllers/profile_controller.dart';
+import 'package:donate_life/app/modules/create_profile/components/custom_dropdown.dart';
+import 'package:donate_life/app/modules/create_profile/components/custom_textfield.dart';
+import 'package:donate_life/app/modules/create_profile/controllers/profile_controller.dart';
 import 'package:donate_life/app/routes/app_pages.dart';
 import 'package:donate_life/app/utils/colors.dart';
 import 'package:donate_life/utils/custom_clipper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import '../components/custom_dropdown_with_flag.dart';
@@ -15,6 +16,30 @@ class ProfileView extends GetView<ProfileController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: controller.isViewing.value
+          ? AppBar(
+              backgroundColor: AppColors.white,
+              elevation: 0,
+              leading: IconButton(
+                icon: const Icon(
+                  Icons.arrow_back_ios,
+                  color: AppColors.secondaryColor,
+                ),
+                onPressed: () {
+                  Get.back();
+                },
+              ),
+              title: const Text(
+                'Blood Hero Profile',
+                style: TextStyle(
+                  color: AppColors.secondaryColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 1.5,
+                ),
+              ),
+            )
+          : null,
       body: SafeArea(
         child: SizedBox(
           width: Get.width,
@@ -27,29 +52,34 @@ class ProfileView extends GetView<ProfileController> {
                 children: [
                   const SizedBox(height: 30),
                   Row(
+                    mainAxisAlignment: controller.isViewing.value ? MainAxisAlignment.center : MainAxisAlignment.start,
                     children: [
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                        crossAxisAlignment: controller.isViewing.value ? CrossAxisAlignment.center : CrossAxisAlignment.start,
                         children: [
-                          const Text(
-                            'Create Profile',
-                            style: TextStyle(
-                              color: AppColors.secondaryColor,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w700,
-                              letterSpacing: 1.5,
-                            ),
-                          ),
-                          const Text(
-                            'Submit your personal details here.',
-                            style: TextStyle(
-                              color: AppColors.secondaryColor,
-                              fontSize: 12,
-                              letterSpacing: 1.2,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                          const SizedBox(height: 15),
+                          controller.isViewing.value
+                              ? const SizedBox()
+                              : const Text(
+                                  'Create Profile',
+                                  style: TextStyle(
+                                    color: AppColors.secondaryColor,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w700,
+                                    letterSpacing: 1.5,
+                                  ),
+                                ),
+                          controller.isViewing.value
+                              ? const SizedBox()
+                              : const Text(
+                                  'Submit your personal details here.',
+                                  style: TextStyle(
+                                    color: AppColors.secondaryColor,
+                                    fontSize: 12,
+                                    letterSpacing: 1.2,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ),
+                          controller.isViewing.value ? const SizedBox() : const SizedBox(height: 15),
                           GestureDetector(
                             onTap: () {
                               //TODO controller.getImage();
@@ -59,7 +89,7 @@ class ProfileView extends GetView<ProfileController> {
                               child: Container(
                                 height: 100,
                                 width: 100,
-                                color: AppColors.primaryColor,
+                                color: AppColors.secondaryColor,
                                 child: SizedBox(
                                   height: 50,
                                   width: 50,

@@ -1,3 +1,5 @@
+import 'package:donate_life/app/modules/create_profile/controllers/profile_controller.dart';
+import 'package:donate_life/app/routes/app_pages.dart';
 import 'package:donate_life/app/utils/colors.dart';
 import 'package:donate_life/utils/custom_clipper.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +30,7 @@ class HomeView extends GetView<HomeController> {
           children: [
             SizedBox(
               width: Get.width,
-              height: Get.height * 0.45,
+              height: Get.height * 0.5,
               child: SvgPicture.asset(
                 'assets/svg/home/background_blood.svg',
                 fit: BoxFit.fill,
@@ -44,18 +46,25 @@ class HomeView extends GetView<HomeController> {
             Positioned(
               top: 20,
               right: 20,
-              child: ClipPath(
-                clipper: CircleClipper(),
-                child: Container(
-                  width: 45,
-                  height: 45,
-                  color: AppColors.yellow,
+              child: GestureDetector(
+                onTap: () {
+                  Get.put(HomeController()); // TODO: temporary solution
+                  controller.profileController.isViewing.value = true;
+                  Get.toNamed(Routes.PROFILE);
+                },
+                child: ClipPath(
+                  clipper: CircleClipper(),
+                  child: Container(
+                    width: 45,
+                    height: 45,
+                    color: AppColors.yellow,
+                  ),
                 ),
               ),
             ),
 
             Positioned(
-              top: 80,
+              top: 90,
               left: 20,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,7 +82,7 @@ class HomeView extends GetView<HomeController> {
                       const DonationInfo(title: 'last\ndonation', value: '26 march'),
                     ],
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 20),
                   const Text(
                     'Every blood',
                     style: TextStyle(
@@ -91,14 +100,15 @@ class HomeView extends GetView<HomeController> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 20),
                   SizedBox(
                     width: Get.width - 40,
                     child: const Text(
                       'Donating blood is one of the easiest things you can do to help save a life. It only takes about 1 hour of your time, with 10 minutes of that being the actual blood donation. That small amount of time in your day can mean a lifetime to others.',
                       style: TextStyle(
                         color: AppColors.white,
-                        fontSize: 11,
+                        fontSize: 12,
+                        height: 1.6,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
@@ -114,7 +124,7 @@ class HomeView extends GetView<HomeController> {
               child: SizedBox(
                 // padding: const EdgeInsets.symmetric(horizontal: 20),
                 width: Get.width,
-                height: Get.height * 0.42, //TODO might have to change
+                height: Get.height * 0.43, //TODO might have to change
                 child: GridView.builder(
                   physics: const NeverScrollableScrollPhysics(),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

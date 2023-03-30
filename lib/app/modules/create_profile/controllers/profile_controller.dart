@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 
 class ProfileController extends GetxController {
   Rx<DateTime> selectedDate = DateTime.now().obs;
+  
+  RxBool isViewing = false.obs;
 
   Future<void> selectDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
