@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/add_donor/bindings/add_donor_binding.dart';
+import '../modules/add_donor/views/add_donor_view.dart';
 import '../modules/bottom_nav_bar/bindings/bottom_nav_bar_binding.dart';
 import '../modules/bottom_nav_bar/views/bottom_nav_bar_view.dart';
 import '../modules/create_profile/bindings/profile_binding.dart';
@@ -78,6 +80,11 @@ class AppPages {
       name: _Paths.SEARCH_DONOR,
       page: () => const SearchDonorView(),
       binding: SearchDonorBinding(),
+    ),
+    GetPage(
+      name: _Paths.ADD_DONOR,
+      page: () => const AddDonorView(),
+      binding: AddDonorBinding(),
     ),
   ];
 }

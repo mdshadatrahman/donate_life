@@ -136,6 +136,8 @@ class HomeView extends GetView<HomeController> {
                       onTap: () {
                         if (index == 0) {
                           Get.toNamed(Routes.SEARCH_DONOR);
+                        } else if (index == 1) {
+                          Get.toNamed(Routes.ADD_DONOR);
                         }
                       },
                       child: Padding(
