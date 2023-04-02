@@ -29,6 +29,7 @@ flutter:
     - assets/svg/home/
     - assets/svg/history/
     - assets/svg/notifications/
+    - assets/svg/menu/
     - assets/lottie/
   fonts:
     - family: Poppins
