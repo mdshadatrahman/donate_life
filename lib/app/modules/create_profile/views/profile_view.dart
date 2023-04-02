@@ -1,14 +1,13 @@
-import 'package:donate_life/app/modules/create_profile/components/custom_dropdown.dart';
-import 'package:donate_life/app/modules/create_profile/components/custom_textfield.dart';
 import 'package:donate_life/app/modules/create_profile/controllers/profile_controller.dart';
 import 'package:donate_life/app/routes/app_pages.dart';
 import 'package:donate_life/app/utils/colors.dart';
+import 'package:donate_life/app/utils/custom_dropdown.dart';
+import 'package:donate_life/app/utils/custom_dropdown_with_flag.dart';
+import 'package:donate_life/app/utils/custom_textfield.dart';
 import 'package:donate_life/utils/custom_clipper.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import '../components/custom_dropdown_with_flag.dart';
 
 class ProfileView extends GetView<ProfileController> {
   const ProfileView({Key? key}) : super(key: key);

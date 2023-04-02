@@ -1,3 +1,4 @@
+import 'package:donate_life/app/modules/history/views/add_donation_record_view.dart';
 import 'package:donate_life/app/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -45,12 +46,17 @@ class HistoryView extends GetView<HistoryController> {
               top: 60,
               right: 30,
               child: Center(
-                child: SizedBox(
-                  height: 30,
-                  width: 30,
-                  child: SvgPicture.asset(
-                    'assets/svg/history/add.svg',
-                    fit: BoxFit.fill,
+                child: GestureDetector(
+                  onTap: () {
+                    Get.to(() => const AddDonationRecordView());
+                  },
+                  child: SizedBox(
+                    height: 30,
+                    width: 30,
+                    child: SvgPicture.asset(
+                      'assets/svg/history/add.svg',
+                      fit: BoxFit.fill,
+                    ),
                   ),
                 ),
               ),
