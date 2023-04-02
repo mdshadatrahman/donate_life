@@ -122,6 +122,90 @@ class ProfileView extends GetView<ProfileController> {
                     keyboardType: TextInputType.name,
                     isRequired: true,
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 25),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Expanded(
+                          child: CustomDropDown(
+                            title: 'Gender',
+                            customCategory: [
+                              'Male',
+                              'Female',
+                            ],
+                          ),
+                        ),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: () {
+                              controller.selectLastDonation(context);
+                            },
+                            child: Stack(
+                              clipBehavior: Clip.none,
+                              children: [
+                                Container(
+                                  height: 53,
+                                  width: double.infinity,
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 10,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    border: Border.all(
+                                      color: AppColors.primaryColor.withOpacity(0.2),
+                                      width: 1,
+                                    ),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Padding(
+                                        padding: const EdgeInsets.only(left: 10),
+                                        child: Obx(
+                                          () => Text(
+                                            controller.selectedLastDonationFormatted,
+                                            style: const TextStyle(
+                                              color: AppColors.secondaryColor,
+                                              fontSize: 14,
+                                            ),
+                                          ),
+                                        ),
+                                      ),
+                                      const Icon(
+                                        Icons.calendar_month_outlined,
+                                        color: AppColors.secondaryColor,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                Positioned(
+                                  top: -10,
+                                  left: 10,
+                                  child: Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 2.5,
+                                    ),
+                                    color: AppColors.primaryColor,
+                                    child: const Text(
+                                      'Last Donation Date',
+                                      style: TextStyle(
+                                        color: AppColors.white,
+                                        fontSize: 11,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                   const CustomTextField(
                     title: 'Email Address (optional)',
                     keyboardType: TextInputType.emailAddress,
@@ -157,7 +241,7 @@ class ProfileView extends GetView<ProfileController> {
                         Expanded(
                           child: GestureDetector(
                             onTap: () {
-                              controller.selectDate(context);
+                              controller.selectBirthDay(context);
                             },
                             child: Stack(
                               clipBehavior: Clip.none,
