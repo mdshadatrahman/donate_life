@@ -1,6 +1,7 @@
 import 'package:donate_life/app/modules/history/views/add_donation_record_view.dart';
 import 'package:donate_life/app/utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
@@ -13,6 +14,16 @@ class HistoryView extends GetView<HistoryController> {
   Widget build(BuildContext context) {
     double space = 15;
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 1,
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: AppColors.primaryColor,
+          statusBarIconBrightness: Brightness.light,
+          statusBarBrightness: Brightness.dark,
+        ),
+        backgroundColor: AppColors.primaryColor,
+        elevation: 0,
+      ),
       body: SizedBox(
         width: Get.width,
         height: Get.height,
