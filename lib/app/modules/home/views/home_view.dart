@@ -140,6 +140,8 @@ class HomeView extends GetView<HomeController> {
                           Get.toNamed(Routes.ADD_DONOR);
                         } else if (index == 2) {
                           Get.toNamed(Routes.BLOOD_BANK);
+                        } else if (index == 3) {
+                          Get.toNamed(Routes.AMBULANCE);
                         }
                       },
                       child: Padding(

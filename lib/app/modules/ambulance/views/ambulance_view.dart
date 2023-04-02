@@ -1,4 +1,4 @@
-import 'package:donate_life/app/modules/search_donor/components/custom_popup.dart';
+import 'package:donate_life/app/modules/ambulance/controllers/ambulance_controller.dart';
 import 'package:donate_life/app/utils/colors.dart';
 import 'package:donate_life/app/utils/custom_dropdown.dart';
 import 'package:donate_life/utils/custom_clipper.dart';
@@ -7,10 +7,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/blood_bank_controller.dart';
-
-class BloodBankView extends GetView<BloodBankController> {
-  const BloodBankView({Key? key}) : super(key: key);
+class AmbulanceView extends GetView<AmbulanceController> {
+  const AmbulanceView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +25,7 @@ class BloodBankView extends GetView<BloodBankController> {
           },
         ),
         title: const Text(
-          'Blood Bank',
+          'Ambulance',
           style: TextStyle(
             color: AppColors.secondaryColor,
             fontSize: 18,
@@ -63,7 +61,7 @@ class BloodBankView extends GetView<BloodBankController> {
                   Row(
                     children: [
                       const Text(
-                        'Available Blood Banks',
+                        'Available Ambulance Service',
                         style: TextStyle(
                           color: AppColors.secondaryColor,
                           fontSize: 12,
@@ -124,7 +122,7 @@ class BloodBankView extends GetView<BloodBankController> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: const [
                                     Text(
-                                      'Blood Bank Name',
+                                      'Service Name',
                                       style: TextStyle(
                                         // decoration: TextDecoration.underline,
                                         color: AppColors.secondaryColor,
