@@ -2,6 +2,8 @@ import 'package:get/get.dart';
 
 import '../modules/add_donor/bindings/add_donor_binding.dart';
 import '../modules/add_donor/views/add_donor_view.dart';
+import '../modules/blood_bank/bindings/blood_bank_binding.dart';
+import '../modules/blood_bank/views/blood_bank_view.dart';
 import '../modules/bottom_nav_bar/bindings/bottom_nav_bar_binding.dart';
 import '../modules/bottom_nav_bar/views/bottom_nav_bar_view.dart';
 import '../modules/create_profile/bindings/profile_binding.dart';
@@ -85,6 +87,11 @@ class AppPages {
       name: _Paths.ADD_DONOR,
       page: () => const AddDonorView(),
       binding: AddDonorBinding(),
+    ),
+    GetPage(
+      name: _Paths.BLOOD_BANK,
+      page: () => const BloodBankView(),
+      binding: BloodBankBinding(),
     ),
   ];
 }
