@@ -12,6 +12,7 @@ abstract class Routes {
   static const HISTORY = _Paths.HISTORY;
   static const NOTIFICATION = _Paths.NOTIFICATION;
   static const MENU = _Paths.MENU;
+  static const SEARCH_DONOR = _Paths.SEARCH_DONOR;
 }
 
 abstract class _Paths {
@@ -25,4 +26,5 @@ abstract class _Paths {
   static const HISTORY = '/history';
   static const NOTIFICATION = '/notification';
   static const MENU = '/menu';
+  static const SEARCH_DONOR = '/search-donor';
 }

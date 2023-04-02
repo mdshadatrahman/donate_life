@@ -16,6 +16,8 @@ import '../modules/notification/bindings/notification_binding.dart';
 import '../modules/notification/views/notification_view.dart';
 import '../modules/on_boarding/bindings/on_boarding_binding.dart';
 import '../modules/on_boarding/views/on_boarding_view.dart';
+import '../modules/search_donor/bindings/search_donor_binding.dart';
+import '../modules/search_donor/views/search_donor_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 
@@ -71,6 +73,11 @@ class AppPages {
       name: _Paths.MENU,
       page: () => const MenuView(),
       binding: MenuBinding(),
+    ),
+    GetPage(
+      name: _Paths.SEARCH_DONOR,
+      page: () => const SearchDonorView(),
+      binding: SearchDonorBinding(),
     ),
   ];
 }

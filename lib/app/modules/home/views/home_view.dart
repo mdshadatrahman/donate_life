@@ -132,45 +132,52 @@ class HomeView extends GetView<HomeController> {
                   ),
                   itemCount: 6,
                   itemBuilder: (context, index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: Container(
-                        decoration: ShapeDecoration(
-                          color: AppColors.white,
-                          shape: ContinuousRectangleBorder(
-                            side: const BorderSide(
-                              style: BorderStyle.solid,
-                              color: AppColors.primaryColor,
-                              width: 0.5,
-                            ),
-                            borderRadius: BorderRadius.circular(70.0),
-                          ),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              height: 50,
-                              width: 50,
-                              child: SvgPicture.asset('assets/svg/logo.svg'),
-                            ),
-                            const Text(
-                              'Search Donor',
-                              style: TextStyle(
-                                fontSize: 10,
+                    return GestureDetector(
+                      onTap: () {
+                        if (index == 0) {
+                          Get.toNamed(Routes.SEARCH_DONOR);
+                        }
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Container(
+                          decoration: ShapeDecoration(
+                            color: AppColors.white,
+                            shape: ContinuousRectangleBorder(
+                              side: const BorderSide(
+                                style: BorderStyle.solid,
                                 color: AppColors.primaryColor,
+                                width: 0.5,
                               ),
+                              borderRadius: BorderRadius.circular(70.0),
                             ),
-                            const Text(
-                              'Search Donor By Area',
-                              style: TextStyle(
-                                fontSize: 7,
-                                color: AppColors.secondaryColor,
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SizedBox(
+                                height: 50,
+                                width: 50,
+                                child: SvgPicture.asset('assets/svg/logo.svg'),
                               ),
-                            ),
-                            const SizedBox(height: 10),
-                          ],
+                              const Text(
+                                'Search Donor',
+                                style: TextStyle(
+                                  fontSize: 10,
+                                  color: AppColors.primaryColor,
+                                ),
+                              ),
+                              const Text(
+                                'Search Donor By Area',
+                                style: TextStyle(
+                                  fontSize: 7,
+                                  color: AppColors.secondaryColor,
+                                ),
+                              ),
+                              const SizedBox(height: 10),
+                            ],
+                          ),
                         ),
                       ),
                     );
