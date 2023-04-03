@@ -70,8 +70,9 @@ class NotificationTile extends StatelessWidget {
             ),
             //Time
             Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const SizedBox(height: 27),
                 Text(
                   notification['time'],
                   style: const TextStyle(

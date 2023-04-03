@@ -1,10 +1,7 @@
 import 'package:donate_life/app/modules/notification/components/notification_tile.dart';
 import 'package:donate_life/app/utils/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:get/get.dart';
-
 import '../controllers/notification_controller.dart';
 
 class NotificationView extends GetView<NotificationController> {
