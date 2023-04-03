@@ -376,6 +376,8 @@ class ProfileView extends GetView<ProfileController> {
                       ),
                     ),
                   ),
+                  const SizedBox(height: 20),
+                  const SizedBox(height: 20),
                 ],
               ),
             ),
