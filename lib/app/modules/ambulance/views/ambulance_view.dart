@@ -42,15 +42,35 @@ class AmbulanceView extends GetView<AmbulanceController> {
           child: Column(
             children: [
               const SizedBox(height: 30),
-              const CustomDropDown(
-                title: 'City/Area',
-                customCategory: [
-                  'Khulna',
-                  'Dhaka',
-                  'Rajshahi',
-                  'Chittagong',
-                  'Barisal',
-                  'Sylhet',
+              Row(
+                children: const [
+                  Expanded(
+                    child: CustomDropDown(
+                      title: 'City',
+                      customCategory: [
+                        'Khulna',
+                        'Dhaka',
+                        'Rajshahi',
+                        'Chittagong',
+                        'Barisal',
+                        'Sylhet',
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: CustomDropDown(
+                      title: 'Area',
+                      customCategory: [
+                        'Khulna',
+                        'Dhaka',
+                        'Rajshahi',
+                        'Chittagong',
+                        'Barisal',
+                        'Sylhet',
+                      ],
+                    ),
+                  ),
                 ],
               ),
               const SizedBox(height: 30),

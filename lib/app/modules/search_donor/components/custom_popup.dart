@@ -10,13 +10,13 @@ class CustomPopupDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     double space = 20;
     return Dialog(
-      insetPadding: const EdgeInsets.symmetric(horizontal: 15),
+      insetPadding: const EdgeInsets.symmetric(horizontal: 30),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
         side: const BorderSide(color: AppColors.primaryColor, width: 1.5),
       ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -38,12 +38,12 @@ class CustomPopupDialog extends StatelessWidget {
             Row(
               children: [
                 const CircleAvatar(
-                  radius: 50,
+                  radius: 45,
                   backgroundColor: AppColors.primaryColor,
                   child: Icon(
                     Icons.person,
                     color: Colors.white,
-                    size: 60,
+                    size: 50,
                   ),
                 ),
                 const SizedBox(width: 20),
@@ -64,13 +64,24 @@ class CustomPopupDialog extends StatelessWidget {
                         SvgPicture.asset('assets/svg/blue_tick.svg')
                       ],
                     ),
-                    const SizedBox(height: 5),
+                    const SizedBox(
+                      width: 190,
+                      child: Text(
+                        'Md Sadman Rahman',
+                        style: TextStyle(
+                          letterSpacing: 0.8,
+                          color: AppColors.secondaryColor,
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ),
                     const Text(
-                      'Md Sadman Store',
+                      'Dhaka, Bangladesh',
                       style: TextStyle(
-                        letterSpacing: 0.8,
                         color: AppColors.secondaryColor,
-                        fontSize: 16,
+                        fontSize: 12,
+                        letterSpacing: 0.8,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
@@ -157,16 +168,6 @@ class CustomPopupDialog extends StatelessWidget {
                     SizedBox(width: space),
                     const DonationInfo(title: 'last\ndonation', value: '26 march'),
                   ],
-                ),
-                const SizedBox(height: 20),
-                const Text(
-                  'Address: 123, ABC Road, XYZ, Dhaka, Bangladesh\nContact: 0123456789\n',
-                  style: TextStyle(
-                    color: AppColors.secondaryColor,
-                    fontSize: 14,
-                    letterSpacing: 0.8,
-                    fontWeight: FontWeight.w400,
-                  ),
                 ),
                 const SizedBox(height: 10),
               ],

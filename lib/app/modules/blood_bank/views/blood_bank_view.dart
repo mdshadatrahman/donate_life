@@ -1,4 +1,3 @@
-import 'package:donate_life/app/modules/search_donor/components/custom_popup.dart';
 import 'package:donate_life/app/utils/colors.dart';
 import 'package:donate_life/app/utils/custom_dropdown.dart';
 import 'package:donate_life/utils/custom_clipper.dart';
@@ -44,15 +43,35 @@ class BloodBankView extends GetView<BloodBankController> {
           child: Column(
             children: [
               const SizedBox(height: 30),
-              const CustomDropDown(
-                title: 'City/Area',
-                customCategory: [
-                  'Khulna',
-                  'Dhaka',
-                  'Rajshahi',
-                  'Chittagong',
-                  'Barisal',
-                  'Sylhet',
+              Row(
+                children: const [
+                  Expanded(
+                    child: CustomDropDown(
+                      title: 'City',
+                      customCategory: [
+                        'Khulna',
+                        'Dhaka',
+                        'Rajshahi',
+                        'Chittagong',
+                        'Barisal',
+                        'Sylhet',
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: CustomDropDown(
+                      title: 'Area',
+                      customCategory: [
+                        'Khulna',
+                        'Dhaka',
+                        'Rajshahi',
+                        'Chittagong',
+                        'Barisal',
+                        'Sylhet',
+                      ],
+                    ),
+                  ),
                 ],
               ),
               const SizedBox(height: 30),

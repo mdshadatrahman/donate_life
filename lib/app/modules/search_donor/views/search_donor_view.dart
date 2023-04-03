@@ -1,7 +1,6 @@
 import 'package:donate_life/app/modules/search_donor/components/custom_popup.dart';
 import 'package:donate_life/app/utils/colors.dart';
 import 'package:donate_life/app/utils/custom_dropdown.dart';
-import 'package:donate_life/app/utils/custom_dropdown_with_flag.dart';
 import 'package:donate_life/utils/custom_clipper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -57,15 +56,35 @@ class SearchDonorView extends GetView<SearchDonorController> {
                 ],
               ),
               const SizedBox(height: 25),
-              const CustomDropDown(
-                title: 'City/Area',
-                customCategory: [
-                  'Khulna',
-                  'Dhaka',
-                  'Rajshahi',
-                  'Chittagong',
-                  'Barisal',
-                  'Sylhet',
+              Row(
+                children: const [
+                  Expanded(
+                    child: CustomDropDown(
+                      title: 'City',
+                      customCategory: [
+                        'Khulna',
+                        'Dhaka',
+                        'Rajshahi',
+                        'Chittagong',
+                        'Barisal',
+                        'Sylhet',
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: CustomDropDown(
+                      title: 'Area',
+                      customCategory: [
+                        'Khulna',
+                        'Dhaka',
+                        'Rajshahi',
+                        'Chittagong',
+                        'Barisal',
+                        'Sylhet',
+                      ],
+                    ),
+                  ),
                 ],
               ),
               const SizedBox(height: 30),
@@ -90,7 +109,7 @@ class SearchDonorView extends GetView<SearchDonorController> {
                   Expanded(child: Container())
                 ],
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
               SizedBox(
                 height: Get.height * 0.60,
                 width: Get.width,
