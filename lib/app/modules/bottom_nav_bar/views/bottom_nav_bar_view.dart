@@ -63,7 +63,7 @@ class BottomNavBarView extends GetView<BottomNavBarController> {
                         },
                         child: Obx(
                           () => SvgPicture.asset(
-                            controller.selectedIndex.value == 1 ? 'assets/svg/bottom_nav/History-1.svg' : 'assets/svg/bottom_nav/History.svg',
+                            controller.selectedIndex.value == 1 ? 'assets/svg/bottom_nav/Inbox-1.svg' : 'assets/svg/bottom_nav/Inbox.svg',
                             width: 40,
                             height: 40,
                           ),

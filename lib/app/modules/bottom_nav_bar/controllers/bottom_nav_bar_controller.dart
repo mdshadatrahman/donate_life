@@ -1,7 +1,7 @@
-import 'package:donate_life/app/modules/history/controllers/history_controller.dart';
-import 'package:donate_life/app/modules/history/views/history_view.dart';
 import 'package:donate_life/app/modules/home/controllers/home_controller.dart';
 import 'package:donate_life/app/modules/home/views/home_view.dart';
+import 'package:donate_life/app/modules/inbox/controllers/inbox_controller.dart';
+import 'package:donate_life/app/modules/inbox/views/inbox_view.dart';
 import 'package:donate_life/app/modules/menu/views/menu_view.dart';
 import 'package:donate_life/app/modules/notification/controllers/notification_controller.dart';
 import 'package:donate_life/app/modules/notification/views/notification_view.dart';
@@ -11,7 +11,7 @@ import 'package:get/get.dart';
 class BottomNavBarController extends GetxController {
   static List<Widget> pages = [
     const HomeView(),
-    const HistoryView(),
+    const InboxView(),
     const NotificationView(),
     const MenuView(),
   ];
@@ -28,7 +28,7 @@ class BottomNavBarController extends GetxController {
     if (index == 0) {
       Get.lazyPut(() => HomeController());
     } else if (index == 1) {
-      Get.lazyPut(() => HistoryController());
+      Get.lazyPut(() => InboxController());
     } else if (index == 2) {
       Get.lazyPut(() => NotificationController());
     } else if (index == 3) {

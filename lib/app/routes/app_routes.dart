@@ -16,6 +16,7 @@ abstract class Routes {
   static const ADD_DONOR = _Paths.ADD_DONOR;
   static const BLOOD_BANK = _Paths.BLOOD_BANK;
   static const AMBULANCE = _Paths.AMBULANCE;
+  static const INBOX = _Paths.INBOX;
 }
 
 abstract class _Paths {
@@ -33,4 +34,5 @@ abstract class _Paths {
   static const ADD_DONOR = '/add-donor';
   static const BLOOD_BANK = '/blood-bank';
   static const AMBULANCE = '/ambulance';
+  static const INBOX = '/inbox';
 }
