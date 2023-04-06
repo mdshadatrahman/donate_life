@@ -123,6 +123,7 @@ class SearchDonorView extends GetView<SearchDonorController> {
                         onTap: () {
                           showDialog(
                             context: context,
+                            barrierColor: AppColors.white.withOpacity(0.8),
                             builder: (context) {
                               return const CustomPopupDialog();
                             },

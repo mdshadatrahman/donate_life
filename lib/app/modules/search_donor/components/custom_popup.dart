@@ -76,15 +76,6 @@ class CustomPopupDialog extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Text(
-                      'Dhaka, Bangladesh',
-                      style: TextStyle(
-                        color: AppColors.secondaryColor,
-                        fontSize: 12,
-                        letterSpacing: 0.8,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
                   ],
                 ),
               ],
@@ -95,8 +86,12 @@ class CustomPopupDialog extends StatelessWidget {
               width: double.infinity,
               height: 60,
               decoration: BoxDecoration(
-                color: AppColors.primaryColor,
+                color: AppColors.white,
                 borderRadius: BorderRadius.circular(10),
+                border: Border.all(
+                  color: AppColors.primaryColor,
+                  width: 0.7,
+                ),
                 boxShadow: [
                   BoxShadow(
                     color: AppColors.black.withOpacity(0.1),
@@ -108,10 +103,10 @@ class CustomPopupDialog extends StatelessWidget {
               child: Row(
                 children: [
                   const SizedBox(width: 15),
-                  SvgPicture.asset(
-                    'assets/svg/menu/logo_white.svg',
-                    height: 30,
-                    width: 30,
+                  const Icon(
+                    Icons.location_on_rounded,
+                    color: AppColors.primaryColor,
+                    size: 35,
                   ),
                   const SizedBox(width: 10),
                   Column(
@@ -121,17 +116,17 @@ class CustomPopupDialog extends StatelessWidget {
                       Row(
                         children: const [
                           Text(
-                            'donate',
+                            'Donor',
                             style: TextStyle(
-                              color: AppColors.white,
+                              color: AppColors.primaryColor,
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
                           Text(
-                            'life',
+                            'Location',
                             style: TextStyle(
-                              color: AppColors.yellow,
+                              color: AppColors.secondaryColor,
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
                             ),
@@ -139,11 +134,10 @@ class CustomPopupDialog extends StatelessWidget {
                         ],
                       ),
                       const Text(
-                        'Community Member',
+                        'Niketon Bazar Gate, Niketon',
                         style: TextStyle(
-                          color: AppColors.white,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w400,
+                          color: AppColors.primaryColor,
+                          fontSize: 11,
                           letterSpacing: 1.2,
                         ),
                       ),
@@ -175,12 +169,58 @@ class CustomPopupDialog extends StatelessWidget {
 
             const SizedBox(height: 20),
             GestureDetector(
-              onTap: () {}, //TODO launch phone call
+              onTap: () {},
               child: Container(
                 width: double.infinity,
                 height: 50,
                 decoration: BoxDecoration(
                   color: AppColors.white,
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: AppColors.secondaryColor.withOpacity(0.2),
+                    width: 0.7,
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const SizedBox(width: 20),
+                    SvgPicture.asset(
+                      'assets/svg/message.svg',
+                      color: AppColors.secondaryColor,
+                      width: 25,
+                      height: 25,
+                    ),
+                    const SizedBox(width: 10),
+                    const Text(
+                      'Send Message',
+                      style: TextStyle(
+                        color: AppColors.secondaryColor,
+                        fontSize: 12,
+                        letterSpacing: 0.8,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    const Spacer(),
+                    const Icon(
+                      Icons.keyboard_arrow_right,
+                      color: AppColors.secondaryColor,
+                      size: 30,
+                    ),
+                    const SizedBox(width: 10),
+                  ],
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 10),
+            GestureDetector(
+              onTap: () {},
+              child: Container(
+                width: double.infinity,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: AppColors.primaryColor,
                   borderRadius: BorderRadius.circular(10),
                   boxShadow: [
                     BoxShadow(
@@ -191,12 +231,12 @@ class CustomPopupDialog extends StatelessWidget {
                   ],
                 ),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    const SizedBox(width: 10),
+                    const SizedBox(width: 20),
                     SvgPicture.asset(
                       'assets/svg/call.svg',
-                      color: AppColors.primaryColor,
+                      color: AppColors.white,
                       width: 25,
                       height: 25,
                     ),
@@ -204,7 +244,7 @@ class CustomPopupDialog extends StatelessWidget {
                     const Text(
                       'Call Sadman',
                       style: TextStyle(
-                        color: AppColors.primaryColor,
+                        color: AppColors.white,
                         fontSize: 12,
                         letterSpacing: 0.8,
                         fontWeight: FontWeight.w400,
