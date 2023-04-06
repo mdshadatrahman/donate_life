@@ -15,22 +15,31 @@ class SearchDonorView extends GetView<SearchDonorController> {
       appBar: AppBar(
         backgroundColor: AppColors.white,
         elevation: 0,
-        leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back_ios,
-            color: AppColors.secondaryColor,
-          ),
-          onPressed: () {
-            Get.back();
-          },
-        ),
-        title: const Text(
-          'Search Donor',
-          style: TextStyle(
-            color: AppColors.secondaryColor,
-            fontSize: 18,
-            fontWeight: FontWeight.w700,
-            letterSpacing: 1.5,
+        centerTitle: false,
+        leadingWidth: 0,
+        title: Padding(
+          padding: const EdgeInsets.only(left: 0),
+          child: Row(
+            children: [
+              GestureDetector(
+                onTap: () {
+                  Get.back();
+                },
+                child: const Icon(
+                  Icons.arrow_back_ios,
+                  color: AppColors.secondaryColor,
+                ),
+              ),
+              const Text(
+                'Search Donor',
+                style: TextStyle(
+                  color: AppColors.secondaryColor,
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 1.5,
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -98,7 +107,7 @@ class SearchDonorView extends GetView<SearchDonorController> {
                         'Available Donor',
                         style: TextStyle(
                           color: AppColors.secondaryColor,
-                          fontSize: 12,
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

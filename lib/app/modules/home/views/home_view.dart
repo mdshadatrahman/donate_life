@@ -130,7 +130,7 @@ class HomeView extends GetView<HomeController> {
                     crossAxisCount: 3,
                     childAspectRatio: 0.95,
                   ),
-                  itemCount: 6,
+                  itemCount: controller.bloodGroups.length,
                   itemBuilder: (context, index) {
                     return GestureDetector(
                       onTap: () {
@@ -142,6 +142,8 @@ class HomeView extends GetView<HomeController> {
                           Get.toNamed(Routes.BLOOD_BANK);
                         } else if (index == 3) {
                           Get.toNamed(Routes.AMBULANCE);
+                        } else if (index == 5) {
+                          Get.toNamed(Routes.COMMUNITY);
                         }
                       },
                       child: Padding(
@@ -167,16 +169,16 @@ class HomeView extends GetView<HomeController> {
                                 width: 50,
                                 child: SvgPicture.asset('assets/svg/logo.svg'),
                               ),
-                              const Text(
-                                'Search Donor',
-                                style: TextStyle(
+                              Text(
+                                controller.bloodGroups[index]['title']!,
+                                style: const TextStyle(
                                   fontSize: 10,
                                   color: AppColors.primaryColor,
                                 ),
                               ),
-                              const Text(
-                                'Search Donor By Area',
-                                style: TextStyle(
+                              Text(
+                                controller.bloodGroups[index]['subtitle']!,
+                                style: const TextStyle(
                                   fontSize: 7,
                                   color: AppColors.secondaryColor,
                                 ),

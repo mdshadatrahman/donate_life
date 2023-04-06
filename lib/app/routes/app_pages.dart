@@ -8,6 +8,8 @@ import '../modules/blood_bank/bindings/blood_bank_binding.dart';
 import '../modules/blood_bank/views/blood_bank_view.dart';
 import '../modules/bottom_nav_bar/bindings/bottom_nav_bar_binding.dart';
 import '../modules/bottom_nav_bar/views/bottom_nav_bar_view.dart';
+import '../modules/community/bindings/community_binding.dart';
+import '../modules/community/views/community_view.dart';
 import '../modules/create_profile/bindings/profile_binding.dart';
 import '../modules/create_profile/views/profile_view.dart';
 import '../modules/history/bindings/history_binding.dart';
@@ -106,6 +108,11 @@ class AppPages {
       name: _Paths.INBOX,
       page: () => const InboxView(),
       binding: InboxBinding(),
+    ),
+    GetPage(
+      name: _Paths.COMMUNITY,
+      page: () => const CommunityView(),
+      binding: CommunityBinding(),
     ),
   ];
 }

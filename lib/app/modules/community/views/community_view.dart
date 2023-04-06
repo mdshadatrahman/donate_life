@@ -6,10 +6,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
 
-import '../controllers/blood_bank_controller.dart';
+import '../controllers/community_controller.dart';
 
-class BloodBankView extends GetView<BloodBankController> {
-  const BloodBankView({Key? key}) : super(key: key);
+class CommunityView extends GetView<CommunityController> {
+  const CommunityView({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +32,7 @@ class BloodBankView extends GetView<BloodBankController> {
                 ),
               ),
               const Text(
-                'Blood Bank',
+                'Community',
                 style: TextStyle(
                   color: AppColors.secondaryColor,
                   fontSize: 18,
@@ -91,7 +91,7 @@ class BloodBankView extends GetView<BloodBankController> {
                   Row(
                     children: [
                       const Text(
-                        'Available Blood Banks',
+                        'Available Community',
                         style: TextStyle(
                           color: AppColors.secondaryColor,
                           fontSize: 14,
@@ -152,7 +152,7 @@ class BloodBankView extends GetView<BloodBankController> {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: const [
                                     Text(
-                                      'Blood Bank Name',
+                                      'Community Name',
                                       style: TextStyle(
                                         // decoration: TextDecoration.underline,
                                         color: AppColors.secondaryColor,
@@ -165,7 +165,7 @@ class BloodBankView extends GetView<BloodBankController> {
                                     SizedBox(
                                       width: 230,
                                       child: Text(
-                                        'Dhaka Medical College',
+                                        '169/A Rampura South, Dhaka',
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
                                           color: AppColors.secondaryColor,
